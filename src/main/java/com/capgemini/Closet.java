@@ -118,7 +118,7 @@ public class Closet implements ICloset {
                 case 1:
                 case 2:
                     System.out.println("You kicked the closet. The maid ia coming for you, she's very angry! RUN!");
-                    System.out.println("The maid sends you to your room.");
+                    System.out.println("\033[31mThe maid sends you to your room.\033[0m");
                     try {
                         Thread.sleep(3000);
                     } catch (InterruptedException e) {
@@ -131,7 +131,7 @@ public class Closet implements ICloset {
                 case 4:
                 case 5:
                 case 3:
-                    System.out.println("You kicked it good! The closet is now broken.");
+                    System.out.println("\033[31mYou kicked it good! The closet is now broken.\033[0m");
                     closet.state = EState.BROKEN;
                     fix(closet);
                     break;
@@ -169,7 +169,7 @@ public class Closet implements ICloset {
         if (random <= power) {
             System.out.println("You have defeated the white witch!");
             System.out.println("You can talk to King Aslan now.");
-            System.out.println("__________________________¶¶¶¶¶____________\n" +
+            System.out.println("\033[33m__________________________¶¶¶¶¶____________\n" +
                     "__________________¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶_________\n" +
                     "_______________¶¶¶¶¶¶¶¶¶¶¶¶¶__¶__¶¶¶¶¶¶¶¶¶¶¶¶\n" +
                     "______________¶¶¶¶¶¶¶¶¶___¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶\n" +
@@ -211,7 +211,7 @@ public class Closet implements ICloset {
                     "_____________¶¶¶___¶¶¶¶¶¶_______¶¶¶¶¶¶¶¶¶¶¶__\n" +
                     "______________¶¶¶¶_¶¶___¶¶_______¶¶¶¶¶¶¶¶¶¶¶¶\n" +
                     "________________¶¶¶¶¶____¶¶¶______¶¶¶¶¶¶¶¶¶¶¶\n" +
-                    "__________________¶¶¶¶____¶¶¶______¶¶________");
+                    "__________________¶¶¶¶____¶¶¶______¶¶________\033[0m");
             System.out.println("");
             return;
 
